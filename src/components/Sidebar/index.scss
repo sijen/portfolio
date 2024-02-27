@@ -1,0 +1,124 @@
+.nav-bar {
+  background-color: rgba($color: #18181818, $alpha: 0.3);
+  width: 80px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 3;
+  min-height: 500px;
+}
+
+#logo {
+  display: block;
+  padding: 8px 0;
+  img {
+    display: block;
+    margin: 8px auto;
+    width: 30px;
+    height: auto;
+  }
+}
+nav {
+  display: block;
+  text-align: center;
+  position: absolute;
+  height: 210px;
+  top: 50%;
+  margin-top: -120px;
+  width: 100%;
+  a {
+    font-size: 22px;
+    color: #ffffff;
+    display: block;
+    line-height: 51px;
+    height: 51px;
+    position: relative;
+    text-decoration: none;
+    i {
+      transition: all 0.3s ease-out;
+    }
+    &:hover {
+      color: #ffd700;
+      svg {
+        opacity: 0;
+      }
+      &:after {
+        opacity: 1;
+      }
+    }
+    &:after {
+      content: '';
+      font-size: 9px;
+      letter-spacing: 2px;
+      position: absolute;
+      bottom: 0;
+      display: block;
+      width: 100%;
+      text-align: center;
+      opacity: 0;
+      transition: all 0.3s ease-out;
+    }
+    &:first-child {
+      &:after {
+        content: 'HOME';
+      }
+    }
+    &.about-link {
+      &:after {
+        content: 'ABOUT';
+      }
+    }
+    &.blog-link {
+      &:after {
+        content: 'BLOG';
+      }
+    }
+    &.contact-link {
+      &:after {
+        content: 'CONTACT';
+      }
+    }
+    &.active {
+      svg {
+        color: #ffd700;
+      }
+    }
+  }
+}
+
+ul {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  display: block;
+  list-style: none;
+  padding: 0px;
+  text-align: center;
+  margin: 0px;
+
+  li {
+    a {
+      padding: 7px 0;
+      display: block;
+      font-size: 15px;
+      line-height: 16px;
+      &:hover svg {
+        color: #ffd700;
+      }
+    }
+  }
+}
+
+/* Show the sec-logo when the browser window is 500px or less */
+@media (max-width: 500px) {
+  #logo .pri-logo {
+    width: 30px;
+  }
+}
+
+/* Show the pri-logo when the browser window is wider than 300px */
+@media (min-width: 500px) {
+  #logo .pri-logo {
+    width: 60px;
+  }
+}

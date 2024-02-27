@@ -1,0 +1,68 @@
+/* styles.css */
+
+.blog-page {
+  text-align: center;
+  position: relative;
+  h1 {
+    color: #fff;
+    font-size: 53px;
+    margin: 0;
+    font-weight: 400;
+    &::before {
+      content: '<h1>';
+      color: #ffd700;
+      font-size: 18px;
+      position: absolute;
+      margin-top: 18px;
+      margin-left: -60px;
+      opacity: 0.6;
+    }
+    &::after {
+      content: '</h1>';
+      color: #ffd700;
+      font-size: 18px;
+      position: absolute;
+      margin-top: 18px;
+      margin-left: 20px;
+      opacity: 0.6;
+    }
+  }
+}
+
+.blog-posts {
+  position: absolute;
+  left: 15%; /* Shift content 15% to the left */
+  width: 70%; /* Adjust width as needed */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.blog-post {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.blog-post h2 {
+  margin-bottom: 10px;
+}
+
+.blog-post p {
+  margin-bottom: 15px;
+}
+
+/* Show the sec-logo when the browser window is 500px or less */
+@media (max-width: 500px) {
+  .blog-post {
+    left: 25%;
+  }
+}
+
+/* Show the pri-logo when the browser window is wider than 300px */
+@media (min-width: 500px) {
+  .blog-post {
+    left: 15%;
+  }
+}
