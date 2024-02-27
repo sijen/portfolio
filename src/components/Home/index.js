@@ -5,8 +5,9 @@ import AnimatedLetters from '../AnimatedLetters'
 import sijen from '../../images/sijen.png'
 
 const Home = () => {
-  const [letterClass, setLetterClass] = useState('text-animate')
+  const [letterClass] = useState('text-animate')
   // const nameArray = ['S', 'i', 'j', 'e', 'n']
+
   const jobArray = [
     ' ',
     'C',
