@@ -4,7 +4,7 @@ const Contact = () => {
   return (
     <div className="container contact-page">
       <div className="section">
-        <form>
+        <form netlify>
           <div className="form-group">
             <label htmlFor="name">Name:</label>
             <input type="text" id="name" name="name" required />
