@@ -4,7 +4,12 @@ const Contact = () => {
   return (
     <div className="container contact-page">
       <div className="section">
-        <form netlify>
+        <form
+          data-netlify="true"
+          name="pizzaOrder"
+          onSubmit={handleSubmit}
+          netlify={true}
+        >
           <div className="form-group">
             <label htmlFor="name">Name:</label>
             <input type="text" id="name" name="name" required />
@@ -22,5 +27,19 @@ const Contact = () => {
       </div>
     </div>
   )
+}
+const handleSubmit = (event) => {
+  event.preventDefault()
+
+  const myForm = event.target
+  const formData = new FormData(myForm)
+
+  fetch('/', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+    body: new URLSearchParams(formData).toString(),
+  })
+    .then(() => alert('/thank-you/'))
+    .catch((error) => alert(error))
 }
 export default Contact
