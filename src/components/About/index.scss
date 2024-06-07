@@ -1,9 +1,7 @@
 .about-page {
-  .section {
-    position: absolute;
-    left: 15%;
-    top: 50%;
-    transform: translateY(-50%);
+  // margin: auto 0px;
+  .text-zone {
+    margin: auto 0px;
     width: 50%;
     max-width: 90%;
   }
@@ -12,23 +10,5 @@
     font-size: 53px;
     margin: 0;
     font-weight: 400;
-    &::before {
-      content: '<h1>';
-      color: #ffd700;
-      font-size: 18px;
-      position: absolute;
-      margin-top: -40px;
-      left: 15px;
-      opacity: 0.6;
-    }
-    &::after {
-      content: '</h1>';
-      color: #ffd700;
-      font-size: 18px;
-      position: absolute;
-      margin-top: 18px;
-      margin-left: 20px;
-      animation: fadeIn 1s 1.7s backwards;
-    }
   }
 }

@@ -1,10 +1,6 @@
 /* styles.css */
 
 .contact-page .section {
-  position: absolute;
-  left: 15%;
-  top: 50%;
-  transform: translateY(-50%);
   width: 50%;
   max-width: 90%;
 }
@@ -18,7 +14,6 @@
 }
 
 .contact-page form::before {
-  content: '<form>';
   color: #ffd700;
   font-size: 18px;
   position: absolute;
@@ -28,7 +23,6 @@
 }
 
 .contact-page form::after {
-  content: '</form>';
   color: #ffd700;
   font-size: 18px;
   position: absolute;
