@@ -14,43 +14,49 @@ import {
   faLinkedin,
 } from '@fortawesome/free-brands-svg-icons'
 
-const Sidebar = () => {
+const Sidebar = ({selectedView}) => {
+  console.log(selectedView)
+  const scrollToAbout = () => {
+    const aboutSection = document.getElementById('aboutSection');
+    aboutSection.scrollIntoView({ behavior: 'smooth' });
+  };
+  const scrollToHome = () => {
+    const homeSection = document.getElementById('homeSection');
+    homeSection.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  const scrollToContact = () => {
+    const contactSection = document.getElementById('contactSection');
+    contactSection.scrollIntoView({ behavior: 'smooth' });
+  };
   return (
     <div className="nav-bar">
+     <div>
       <Link id="logo" to="/">
         <img className="pri-logo" src={logo} alt="Logo" />
       </Link>
       <nav>
-        <Link exact="true" activeclassname="active" to="/">
+        <button onClick={scrollToHome} activeclassname="active" 
+          className="home-link" >
           <FontAwesomeIcon icon={faHome} color="#4d4d4e" />
-        </Link>
-        <Link
-          exact="true"
-          activeclassname="active"
-          className="about-link"
-          to="/about"
-        >
+        </button>
+        <button onClick={scrollToAbout} 
+          className="about-link">
           <FontAwesomeIcon icon={faUser} color="#4d4d4e" />
-        </Link>
-        <Link
-          exact="true"
-          activeclassname="active"
-          className="blog-link"
-          to="/blog"
-        >
+        </button>
+        <Link to="/blog"
+          className="blog-link">
           <FontAwesomeIcon icon={faBlog} color="#4d4d4e" />
-          {/* <a href="#blog">Blog</a> */}
         </Link>
-
-        <Link
-          exact="true"
+        <button onClick={scrollToContact}
           activeclassname="active"
           className="contact-link"
-          to="/contact"
         >
           <FontAwesomeIcon icon={faEnvelope} color="#4d4d4e" />
-        </Link>
+        </button>
       </nav>
+      </div>
+      {/* social media */}
       <ul>
         <li>
           <a rel="nofererrer" href="https://www.facebook.com/memo.ry.1088/">

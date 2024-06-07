@@ -1,15 +1,19 @@
 /* styles.css */
-
-.blog-page {
-  text-align: center;
+.blog-list {
   position: relative;
+  display: grid;
+  row-gap:20px;
   h1 {
     color: #fff;
     font-size: 53px;
     margin: 0;
     font-weight: 400;
+    background-image: url("../../images/background-blog.jpg");
+    background-blend-mode:hue;
+    text-transform: capitalize;
+    text-shadow: grey 3px 3px;
+    text-align: center;
     &::before {
-      content: '<h1>';
       color: #ffd700;
       font-size: 18px;
       position: absolute;
@@ -18,7 +22,6 @@
       opacity: 0.6;
     }
     &::after {
-      content: '</h1>';
       color: #ffd700;
       font-size: 18px;
       position: absolute;
@@ -30,28 +33,37 @@
 }
 
 .blog-posts {
-  position: absolute;
-  left: 15%; /* Shift content 15% to the left */
-  width: 70%; /* Adjust width as needed */
+  width: 100%; /* Adjust width as needed */
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
+  grid-template-columns: auto auto auto auto;
+  row-gap: 20px;
+  justify-content: space-around;
 }
 
 .blog-post {
   background-color: #f9f9f9;
-  padding: 20px;
+  height: max-content;
+  width: 230px;
+  padding: 10px;
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  h2 {
+    margin-bottom: 10px;
+  }
+  a{
+    text-decoration: none;
+    color: grey;
+  }
+  p {
+    margin-bottom: 15px;
+  }
+  p:nth-of-type(2) {
+    text-align: justify;
+  }
 }
 
-.blog-post h2 {
-  margin-bottom: 10px;
-}
 
-.blog-post p {
-  margin-bottom: 15px;
-}
 
 /* Show the sec-logo when the browser window is 500px or less */
 @media (max-width: 500px) {

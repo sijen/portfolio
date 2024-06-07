@@ -2,9 +2,9 @@ import './index.scss'
 
 const About = () => {
   return (
-    <div className="container home-page">
+    <div className="container about-page" id="aboutSection">
       <div className="text-zone">
-        <h1>Who Am I?</h1>
+        <h1 id>Who Am I?</h1>
         <p style={{ color: 'white', fontWeight: 200 }}>
           In my role, I dive deep into cybersecurity, learning how to analyze
           incidents and gather useful information. I work with experienced

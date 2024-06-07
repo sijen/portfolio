@@ -27,7 +27,7 @@ const Contact = () => {
   }
 
   return (
-    <div className="container contact-page">
+    <div className="container contact-page" id="contactSection">
       <div className="section">
         <form
           data-netlify="true"
