@@ -13,7 +13,7 @@ const BlogPost = ({ id, title, author, excerpt, date }) => {
       <h2>
             <Link
               to={{
-                pathname: `/post/${id}`,
+                pathname: `/blog/${id}`,
                 state: { title, author, excerpt, date}
               }}
             >

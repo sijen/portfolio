@@ -1,12 +1,12 @@
 .home-page {
-  height: 400px;
+  height: 100vh;
   display: flex;
   flex-direction: row;
   align-items:flex-end;
   justify-content: space-between;
   .picture{
-    width:400px;
-    height: auto;
+    width:auto;
+    height: 100%;
     img {
       height: 100%;
       width: 100%;
@@ -19,36 +19,20 @@
   }
   .text{
     width: 50%;
+    padding-bottom: 20px;
   
   h1 {
     color: #fff;
     font-size: 53px;
-    margin: 0;
+    margin: 0px;
     font-weight: 400;
-    // &::before {
-    //   color: #ffd700;
-    //   font-size: 18px;
-    //   position: absolute;
-    //   margin-top: -40px;
-    //   left: 15px;
-    //   opacity: 0.6;
-    // }
-    // &::after {
-    //   color: #ffd700;
-    //   font-size: 18px;
-    //   position: absolute;
-    //   margin-top: 18px;
-    //   margin-left: 20px;
-    //   opacity: 0.6;
-    //   animation: fadeIn 1s 1.7s backwards;
-    // }
     
   }
   h2 {
-    color: #fff;
-    margin-top: 20px;
+    color: #ffffffbb;
+    margin-top: 0px;
     font-weight: 400;
-    font-size: 11px;
+    font-size: 26px;
     font-family: sans-serif;
     letter-spacing: 3px;
     animation: fadeIn 1s 1.8s backwards;
