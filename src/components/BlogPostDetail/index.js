@@ -38,7 +38,7 @@ const BlogPostDetail = () => {
   const relatedPosts = contextState.posts.filter(p => p.id !== postId && p.author === author).slice(0, 3);
 
   return (
-    <div className="blog-post-detail">
+    <section className="blog-post-detail">
       <h2>{title}</h2>
       <p className="time-to-read">Estimated read time: {timeToRead} minute{timeToRead > 1 ? 's' : ''}</p>
       {image && <img src={image} alt={title} className="post-image" />}
@@ -89,7 +89,7 @@ const BlogPostDetail = () => {
           <button type="submit">Submit</button>
         </form>
       </div>
-    </div>
+    </section>
   );
 };
 

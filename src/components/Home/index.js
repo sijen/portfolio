@@ -19,21 +19,22 @@ const Hero = ()=>{
   // const nameArray = ['S', 'i', 'j', 'e', 'n']
 
   const jobArray = [
-    ' ',
-    'C',
-    'y',
-    'b',
+    'S',
     'e',
-    'r',
-    ' ',
-    'G',
+    'c',
     'u',
-    'a',
     'r',
-    'd',
     'i',
-    'a',
+    't',
+    'y',
+    ' ',
+    'A',
     'n',
+    'a',
+    'l',
+    'y',
+    's',
+    't',
   ]
 
   const scrollToContact = () => {
@@ -43,25 +44,17 @@ const Hero = ()=>{
   return(<div className="container home-page" id="homeSection">
     <div className="text">
       <h1>
-        <span className={letterClass}>H</span>
-        <span className={`${letterClass} _12`}>i,</span>
-        <br />
-        <span className={`${letterClass} _13`}>I</span>
-        <span className={`${letterClass} _14`}>'m </span>
-        <span>
-          
-        </span>
-        
-        <AnimatedLetters
-          letterClass={letterClass}
-          strArray={jobArray}
-          idx={22}
-        />
+        <span className={letterClass}>Sijen </span>
+        <span className={`${letterClass} _12`}>&nbsp;Dangol</span>
       </h1>
       <h2>
-        your dedicated protector in the digital world, constantly exploring
-        inventive ways to keep your online domain safe.
+      <AnimatedLetters
+          letterClass={letterClass}
+          strArray={jobArray}
+          idx={10}
+        />
       </h2>
+      
       <button className="flat-button" onClick={scrollToContact}>
         CONTACT ME
       </button>

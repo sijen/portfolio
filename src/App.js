@@ -21,7 +21,7 @@ function App() {
         </Route>
         
         <Route path="/blog" element={<BlogList />} />
-          <Route path="/post/:id" element={<BlogPostDetail />} />
+        <Route path="/blog/:id" element={<BlogPostDetail />} />
       </Routes>
     </PostProvider>
   );
