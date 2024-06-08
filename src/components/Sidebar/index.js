@@ -29,9 +29,10 @@ const Sidebar = ({selectedView}) => {
     const contactSection = document.getElementById('contactSection');
     contactSection.scrollIntoView({ behavior: 'smooth' });
   };
+
   return (
     <div className="nav-bar">
-     <div>
+     
       <Link id="logo" to="/">
         <img className="pri-logo" src={logo} alt="Logo" />
       </Link>
@@ -41,10 +42,12 @@ const Sidebar = ({selectedView}) => {
           <FontAwesomeIcon icon={faHome} color="#4d4d4e" />
         </button>
         <button onClick={scrollToAbout} 
+        activeclassname="active"
           className="about-link">
           <FontAwesomeIcon icon={faUser} color="#4d4d4e" />
         </button>
         <Link to="/blog"
+        activeclassname="active"
           className="blog-link">
           <FontAwesomeIcon icon={faBlog} color="#4d4d4e" />
         </Link>
@@ -55,7 +58,7 @@ const Sidebar = ({selectedView}) => {
           <FontAwesomeIcon icon={faEnvelope} color="#4d4d4e" />
         </button>
       </nav>
-      </div>
+      
       {/* social media */}
       <ul>
         <li>
